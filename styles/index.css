@@ -1,0 +1,416 @@
+:root {
+	--rojo: #09e514;
+	--fondo: #141414;
+	--padding: 10px 20px;
+    --radius: 10px;
+    --efecto: all .5s;
+
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Sansita+Swashed:wght@500&display=swap");
+
+header{
+
+    display: flex;
+
+    min-height: 75px;
+
+    background-color: rgb(0, 0, 0);
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 50%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+	align-items: center;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.container aside{
+    width: 20%;
+    height: 100vh;
+    background-color: #000000;
+    padding: var(--padding);
+}
+.container aside .menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container aside .menu a{
+    text-decoration: none;
+    padding: 10px 1rem;
+    color: #c5c5c5;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container aside .menu a span{
+    margin-right: 8px;
+}
+.container aside .menu a.active{
+    background-color: #282828;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.container aside .menu a:hover{
+    color: #ffffff;
+}
+.container section{
+    width: 80%;
+    height: 100vh;
+    color: #ffffff;
+    background-color: var(--fondo);
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+}
+.container section::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+.container section::-webkit-scrollbar:vertical{
+    width: 7px;
+}
+.container section::-webkit-scrollbar-thumb{
+    background-color: #797979;
+}
+.container section header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: var(--padding);
+    width: 80%;
+    background-color: #505053;
+    z-index: 2;
+}
+
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/lorax.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+}
+
+.logo{
+	margin-left: 2.25em;
+}
+
+.logo img{
+	margin-left: 0.50em;
+}
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		align-items: center;
+	
+	}
+
+
+
+
+
+}
+
+/* ---- ----- ----- otras pelis ----- ----- ----- */
+.pelis-reco {
+	margin-left: 2.25em;
+	color:white
+}
+
+.pelis-reco .imagenes{
+	margin-top: 2.25em;
+}
+
+.pelis-inf {
+	margin-left: 2.25em;
+	color:white
+}
+
+.pelis-inf .imagenes{
+	margin-top: 2.25em;
+}
+
+.pelis-terror {
+	margin-left: 2.25em;
+	color:white
+}
+
+.pelis-terror .imagenes{
+	margin-top: 2.25em;
+}
+
+.pelis-acc {
+	margin-left: 2.25em;
+	color:white
+}
+
+.pelis-acc .imagenes{
+	margin-top: 2.25em;
+}
+
+.musicas{
+	margin-top: 2.25em;
+    margin-left: 2.25em;
+	color:white
+}
+
+.imagenes-ils img{
+	margin-left: 2.25em;
+}
+
+.tx {
+	margin-left: 2.25em;
+	color:white
+}
+
+a:link {
+	margin-right: 2.25em;
+	text-decoration: none;
+	color: white;
+  }
+  a:visited {
+	text-decoration: none;
+	color: white;
+  }
+
+.player audio{
+	color: rgba(0, 0, 0, 0);
+}
+
+.player{
+	margin-top: 2.25em;
+    margin-left: 2.25em;
+	color:white
+}
+
+.mp3 {
+	margin-top: 1.12em;
+	align-items: center;
+}
+
+.mp3 img{
+	align-items: center;
+	margin-top: 0.12em;
+}
+
+.music-player-container{
+	background: linear-gradient(30deg rgba(0,0,0.65), rgba(0,0,0.85));
+	backdrop-filter: blur(10px);
+	height: fit-content;
+	width: 35vw;
+	border-radius: 10px;
+	padding: 2rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 2px 8px rgba(0,0,0.35);
+
+}
+
+.title-music-container{
+	width: 80%;
+	height: 80%;
+	width: fit-content;
+	color: white;
+	margin-right: auto;
+	margin-left: 10%;
+}
+
+.song-title{
+	font-weight: 600;
+	font-size: 17px;
+	letter-spacing: 0.5px;
+}
+
+.song-autor{
+	margin-top: 0.1rem;
+	font-size: 12px;
+	color: rgb(167, 167, 167);
+	letter-spacing: 0.1px;
+}
+
+.controls-music-container{
+	width: 80%;
+	height: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.progress-song-container{
+	margin-top: 0.6rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.progress-bar{
+	height: 3px;
+	border-radius: 3px;
+	width: 100%;
+	background-color: rgb(102, 102, 102);
+	position: relative;
+}
+
+.progress{
+	position: absolute;
+	height: 100%;
+	width: 0%;
+	border-radius: 3px;
+	background-color: white;
+}
+
+.time-container{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: rgb(167, 167, 167);
+	font-size: 12px;
+}
+
+.time-left{
+	margin-top: 0.3rem;
+}
+
+.main-song-controls{
+	height: 30px;
+	width: 100%;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.icon{
+	height: 100%;
+	width: auto;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.icon:hover{
+	opacity: 1;
+}
+
+audio{
+	display: none;
+}
+
+.letraoriginal{
+	margin-top: 1.25em;
+	margin-left: 2.25em;
+	margin-bottom: 1.25em;
+}
+
